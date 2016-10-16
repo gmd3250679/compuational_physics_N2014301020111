@@ -20,12 +20,19 @@ Under this condition, to use the Euler method, we write each derivative in finit
 
 ![方程](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-5/equation1.png)
 
+
+Of course, just the gravity was considered, and here the gravity velocity are constant. In real war, the above situation is not work, in the following process, I will solve this problem step by step.
+## 2.Background
+From Wikipedia, the free encyclopediaExternal ballistics or exterior ballistics is the part of ballistics that deals with the behavior of a non-powered projectile in flight.
+
+External ballistics is frequently associated with firearms, and deals with the unpowered free-flight phase of the bullet after it exits the barrel and before it hits the target, so it lies between transitional ballistics and terminal ballistics.
+
+However, external ballistics is also concerned with the free-flight of rockets and other projectiles, such as shells, rocket-assisted projectiles, balls, arrows etc.
+![sample](
+## 3.Result
 The result is below.
 
 ![图片](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-5/figure_1.png)
-
-Of course, just the gravity was considered, and here the gravity velocity are constant. In real war, the above situation is not work, in the following process, I will solve this problem step by step.
-
-## Acknowledge
-[tan shan](https://github.com/TanMingjun/compuational_physics_N2014301020106)
-[Pro.Cai](https://www.evernote.com/shard/s140/sh/26f85380-ee6c-4b4b-b33f-6871804d91ff/fb8cc702cb0e8ed7fafb50b2de4596ca)
+## 4.Acknowledge
+# [tan shan](https://github.com/TanMingjun/compuational_physics_N2014301020106)/
+# [Pro.Cai](https://www.evernote.com/shard/s140/sh/26f85380-ee6c-4b4b-b33f-6871804d91ff/fb8cc702cb0e8ed7fafb50b2de4596ca)
