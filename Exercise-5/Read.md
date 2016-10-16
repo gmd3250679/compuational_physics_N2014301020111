@@ -28,11 +28,11 @@ From Wikipedia, the free encyclopediaExternal ballistics or exterior ballistics 
 External ballistics is frequently associated with firearms, and deals with the unpowered free-flight phase of the bullet after it exits the barrel and before it hits the target, so it lies between transitional ballistics and terminal ballistics.
 
 However, external ballistics is also concerned with the free-flight of rockets and other projectiles, such as shells, rocket-assisted projectiles, balls, arrows etc.
-![sample](
+![sample](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-5/ball_angles.gif)
 ## 3.Result
 The result is below.
 
 ![图片](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-5/figure_1.png)
 ## 4.Acknowledge
-# [tan shan](https://github.com/TanMingjun/compuational_physics_N2014301020106)/
+# [tan shan](https://github.com/TanMingjun/compuational_physics_N2014301020106)
 # [Pro.Cai](https://www.evernote.com/shard/s140/sh/26f85380-ee6c-4b4b-b33f-6871804d91ff/fb8cc702cb0e8ed7fafb50b2de4596ca)
