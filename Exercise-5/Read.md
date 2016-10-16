@@ -6,274 +6,113 @@
 #### Student number: 201430102011
 ***
 
-## **1.Abstract（摘要）**
-* 作业2.6 Use the Euler method to calculate cannon shell trajectories ignoring bith air drag and the effect of air density
+# The Fifth Time Homework-Realistic Projectile Motion
 
-![公式](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-5/E5%20formula.png)
+## 1.Abstract
+In warfare you generally want to hit a particular target (as opposed to having the cannon shells land indicriminately). Of course, good prediction is quite helpful to realize it. Daily life tell us the trajectory of a cannon shell is related to a lot of factors, including the uniform air drag, the isothermal air drag, the adiabatic air drag and so on. Here, we will take some of them into consideration in the following parts. It will considerably important for us to learn and use the same method to solve similar problem in the furture.
 
 
-***
+In the last homework, we have already used the Euler method to solve questions, but, last time, we just applied it to differential equation of first order. Now, we will apply it to more complicated situations. To be specific, we consider a projectile such as a shell shot by a cannon. If we air resistance, the equations of motion, which are again obtained from Newton's second law, can be written as
 
-## **2.Background（背景介绍）**
-* ** shell trajectories:**
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation1.png)
 
-####　Problem Just as the qustion-stems indicates, we have the velocity components as arrays.However we could just as well have kept only the "current" value of <img src="http://latex.codecogs.com/gif.latex?\Vx" alt="" title="" /> and <img src="http://latex.codecogs.com/gif.latex?\Vy" alt="" title="" />as we looped through the calculation.
+where x and y are the horizontal and vertical coordinates of the projectile, and g is the acceleration due to gravity. But these equation can't be used to python directly, so one can transform them into four first-order differential equations
 
-* **The Euler Method:**
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation2.png)
 
-####　Still, I choose to use Euler method to deal with this problem. The principle of it, as we have all learned, is Taylor expansion. And the routine process is to substitute the given ordinary differential equation into the first-order derivative of the Taylor expansion and neglect infinitesimals of hiher order.
+Under this condition, to use the Euler method, we write each derivative in finite difference form, which leads to
 
-***
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation3.png)
 
-## **3.Main（正文）**
-### Way of Thinking
-* **An analytic approach**
+Now, we can write codes to operate it. [Click the Code](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/code/%E5%8A%A0%E5%86%9C%E7%82%AE%E6%97%A0%E9%98%BB.py)
 
-　First of all, I find that in this problem A and B are completely symmetric. And another important fact is that the total number of nuclei A and B is constant, which means we can can konw either from the other. So, we can just take one of A and B as pivot element and I choose A.
+The result is below.
 
-![公式7](http://latex.codecogs.com/gif.latex?N%20%3D%20N_A%20&plus;%20N_B%20%3D%20N_A%280%29%20&plus;%20N_B%280%29%20%3D%20N_A%28t%29%20&plus;%20N_B%28t%29)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_1.png)
 
-![公式8](http://latex.codecogs.com/gif.latex?%5Cfrac%7BdN_A%28t%29%7D%7Bdt%7D%20%3D%20%5Cfrac%7BN%20-%20N_A%28t%29%7D%7B%5Ctau%7D%20-%20%5Cfrac%7BN_A%28t%29%7D%7B%5Ctau%7D%20%3D%20%5Cfrac%7BN%20-%202N_A%28t%29%7D%7B%5Ctau%7D)
+Of course, just the gravity was considered, and here the gravity velocity are constant. In real war, the above situation is not work, in the following process, I will solve this problem step by step.
 
-![公式9](http://latex.codecogs.com/gif.latex?%5Cfrac%7BdN_A%28t%29%7D%7BN%20-%202N_A%28t%29%7D%20%3D%20%5Cfrac%7Bdt%7D%7B%5Ctau%7D)
+## 2.Background
+### Question 2.9 and 2.8
+Calculate the trajectory og our cannon shell including both air drag and the reduced air density at high altitudes so that you can reproduce the results in Figure 2.5. Preform your calculation for different firing angles and determine the value of the angle that gives the maximum range. In our model of cannon shell trajectory we have assumed that the acceleration due to gravity, g, is a constant. It will, of course, depend on altitude. Add this to the model and calculate how much it affects the range.
 
-![公式10](http://latex.codecogs.com/gif.latex?-%20%5Cfrac%7B1%7D%7B2%7D%5Cln%20%7CN%20-%202N_A%28t%29%7C%20%3D%20%5Cfrac%7Bt%7D%7B%5Ctau%7D%20&plus;%20C)
+![找一个地球卫星模型](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure2.png)
 
-　There are three situations: 
+## 3.Body Content
+### (1)The Uniform Air Drag
+In our treatment of the bicycle problem we found that air resistance was very important, ao we now add that to the model. As the case with a bicycle, we will assume the magnitude of the drag force on our cannon shell is given by
 
-![公式11](http://latex.codecogs.com/gif.latex?N_A%28t%29%20%3E%20%5Cfrac%7BN%7D%7B2%7D)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation4.png)
 
-![公式12](http://latex.codecogs.com/gif.latex?N_A%28t%29%20%3C%20%5Cfrac%7BN%7D%7B2%7D)
+Adding this force to the equations of motion leads to
 
-![公式13](http://latex.codecogs.com/gif.latex?N_A%28t%29%20%3D%20%5Cfrac%7BN%7D%7B2%7D)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation5.png)
 
-　The first two situations are actually symmetric, i.e., the same, so I will only take the first situation as an example. And the third situation is s special situation.
+But this is not enough, we must assure that y>=0, so, we have this procedure
 
-　Considering all these, I have a solution:
- 
-![公式14](http://latex.codecogs.com/gif.latex?N_A%28t%29%20%3D%20%5Cfrac%7BN%7D%7B2%7D%20-%20%5Cfrac%7BN%20-%202N_A%280%29%7D%7B2%7De%5E%7B-%20%5Cfrac%7B2t%7D%7B%5Ctau%7D%7D) 
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation6.png)
 
-(It indeed satisfies the precoondition.)
+Always, we assume that cannon shells are same with ![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation7.png)
 
-OR
+With the uniform air drag, we can obtain the code. [Click the Code](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/code/%E5%AF%86%E5%BA%A6%E4%B8%8D%E5%8F%9835%2045%2055.py). And the result is given below.
 
-![公式15](http://latex.codecogs.com/gif.latex?N_A%28t%29%20%3D%20%5Cfrac%7BN%7D%7B2%7D)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_2.png)
 
-* **A Numerical approach**
+In order to figure out the difference between the situation of no drag and that of uniform air drag, I chose some initial angles to show.
 
-　First of all, all of our successional disscusion is based on the Taylor expansion for <img src="http://latex.codecogs.com/gif.latex?N_A" alt="" title="" />
- 
-![公式16](http://latex.codecogs.com/gif.latex?N_A%28%5CDelta%20t%29%20%3D%20N_A%280%29%20&plus;%20%5Cfrac%7BdN_A%7D%7Bdt%7D%5CDelta%20t%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%5Cfrac%7Bd%5E2N_A%7D%7Bdt%5E2%7D%20%28%5CDelta%20t%29%5E2%20&plus;%20%5Cdots%20%2C)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_3.png)
 
-　If we take ![公式17](http://latex.codecogs.com/gif.latex?%5CDelta%20t) to be small, then it is usually a good approximation to simply ignore the terms that involve second and higher powers of ![公式18](http://latex.codecogs.com/gif.latex?%5CDelta%20t), leaving us with
- 
-![公式19](http://latex.codecogs.com/gif.latex?N_A%28%5CDelta%20t%29%20%5Capprox%20N_A%280%29%20&plus;%20%5Cfrac%7BdN_A%7D%7Bdt%7D%5CDelta%20t)
+Obviously, they are almost totally different! With air drag, the maximum range is much small. And the situation of no drag can't be applied to warfare. Maybe our work is perfect now, but it is not true.
 
-　The same result can be obtained from the definition of a derivative. The derivative of <img src="http://latex.codecogs.com/gif.latex?N_A" alt="" title="" /> evaluated at time <img src="http://latex.codecogs.com/gif.latex?t" alt="" title="" /> can be written as
- 
-![公式20](http://latex.codecogs.com/gif.latex?%5Cfrac%7BdN_A%7D%7Bdt%7D%20%5Cequiv%20%5Clim_%7B%5CDelta%20t%20%5Crightarrow%200%20%7D%5Cfrac%7BN_A%28t%20&plus;%20%5CDelta%20t%29%20-%20N_A%28t%29%7D%7B%5CDelta%20t%7D%20%5Capprox%20%5Cfrac%7BN_A%28t%20&plus;%20%5CDelta%20t%29%20-%20N_A%28t%29%7D%7B%5CDelta%20t%7D)
+### (2)The Isothermal Ideal Gas Drag
+Generally, the cannon shell, with initial speed 700m/s, can fly very high about several kilometers. Then, the question is "The air density vary as a function of the altitude, how can we solve it?". 
 
-where in the last approximation we have assumed that ![公式21](http://latex.codecogs.com/gif.latex?%5CDelta%20t) is small but nonzero. We can rearrange this to obtain
+First, the most simplest approximation is to treat the atmosphere as an isothermal ideal gas. Through thermal physics, instantly, one have
 
-![公式22](http://latex.codecogs.com/gif.latex?N_A%28t%20&plus;%20%5CDelta%20t%29%20%5Capprox%20N_A%28t%29%20&plus;%20%5Cfrac%7BdN_A%7D%7Bdt%7D%5CDelta%20t)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation8.png)
 
-　From the physics of the problem we know the functional form of the derivative, and if we insert it into my last equation we obtain
- 
- ![公式23](http://latex.codecogs.com/gif.latex?N_A%28t%20&plus;%20%5CDelta%20t%29%20%5Capprox%20N_A%28t%29%20&plus;%20%5Cfrac%7BN%20-%202N_A%7D%7B%5Ctau%7D%5CDelta%20t)
- 
-### Design of Program and Rsult　(Statement: The unit of time is second)
+Then, we write their finite difference form as below
 
-**Firstly I will show my first program which is completely imitated from Prof. Cai's sample program**
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation9.png)
 
-* **This is its source codes**
+Transform them into python code. [Click the Code](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/code/%E5%AF%86%E5%BA%A6%E6%94%B9%E5%8F%981.py). And the result is given below.
 
-### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(old).py)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_4.png)
 
-* **This is its data file**
+We can compare it with the situation of uniform air drag.
 
-### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(old)%20data.txt)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_8.png)
 
-* **This is its figure results**
+### (3)The Adiabatic Air Drag
+Though we have take the air density into consideration, we find our prediction still can't match the measured data very well. In fact there exists a better approximation. That is 
 
-### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(old)%20figure.png)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation10.png)
 
-![图像1](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(old)%20figure.png)
+And  their finite difference form is
 
-　　***As we see, this program is too naive!***
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation11.png)
 
-***
+Now, similarly, the code is [Click the Code](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/code/%E5%AF%86%E5%BA%A6%E6%94%B9%E5%8F%982.py). The result is below.
 
-**So, here comes the improved version: I designed three situations of initial conditions**
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_6.png)
 
-* **Situation 1:　NA = 100,　NB = 0**
+Besides, the firing angles and the maximum range are also important for sodiers to hit targets, so it is quite necessary to show their relations. The code is [Click the Code](). The result is simple like this:
 
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-1).py)
+![图片]()
 
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-1)%20data.txt)
+### (4)Variational Gravity
+In fact, for a cannon shell, when it fly very high, the gravity also will change. We can explain it through Newton's law 
 
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-1)%20figure.png)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation12.png).
 
-![图像2](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-1)%20figure.png)
+Eventually, we can obtain the equation 
 
-* **Situation 2:　NA = 75,　NB = 25**
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/Equation/equation13.png)
 
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-2).py)
+Thus we put it into code[Click the Code](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/code/%E5%AF%86%E5%BA%A6%E5%8A%A0%E9%87%8D%E5%8A%9B.py), and I will show its influence of the cannon shell trajectory to you through comparing it with other situations.
 
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-2)%20data.txt)
+![图片](https://github.com/TanMingjun/compuational_physics_N2014301020106/blob/master/shujubao/Ex_5/figure/figure_7.png)
 
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-2)%20figure.png)
+## 4.Conclusion
 
-![图像3](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-2)%20figure.png)
-
-* **Situation 3:　NA = 50,　NB = 50**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-3).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-3)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-3)%20figure.png)
-
-![图像4](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-3)%20figure.png)
-
-
-* **Three Situations in One Figure(for convenience of comparation)**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-4).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-4)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-4)%20figure.png)
-
-![图像5](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-4)%20figure.png)
-
-### Testing my program
-
-* **Test 1: Three Different Time Steps: Time Step 1 = 0.05, Time Step 2 = 0.01, Time Step 3 = 0.1**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-5).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-5)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-5)%20figure.png)
-
-![图像6](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-5)%20figure.png)
-
-**Testing Results 1: The smaller time steps you choose, the bigger approximation values are**
-
-* **Test 2: Compare Approximation Solution to the True Solution**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-6).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-6)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-6)%20figure.png)
-
-![图像7](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-6)%20figure.png)
-
-
-**Testing Results 2: In my approach, approximation values are smaller than the true values**
-
-* **Test 3: Compare Approximation Solution to the True Solution in Different Time Steps(i.e., Combine Test 1 and Test 2)**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-7).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-7)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-7)%20figure.png)
-
-![图像8](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-7)%20big%20figure.png)
-
-**(Tips: I choose small x-axis limits to magnify the errors between approximation values and the true values)**
-
-**Testing Results 3: The smaller time steps you choose, the smaller errors between approximation values and the true values are**
-
-<br />
-**Testing Results(in all): My programs are reasonable. But I have to say, there is a little trouble(especially with the true values) when the time step approaches the time constant. It may well be the arithmetic problem.**
-
-**There are roughly two types of errors:**
-
-* **Error 1: Time Step = 0.1, Time Constant = 0.05**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%201.py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%20data%201.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%20figure%201.png)
-
-![图像9](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%20figure%201.png)
-
-* **Error 2: Time Step = 0.05, Time Constant = 0.05**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%202.py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%20data%202.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%20figure%202.png)
-
-![图像10](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-10)%20figure%202.png)
-
-**Error Desciption: The curves gradually lose their smoothness, and the true value curve even begins to show vabrations**
-
-**I am sorry I have no more time to explain these errors**
-
-### Furthur Discussion and Extension
-
-**A question occurs to me when I solved this double decay problem-"What if the time constants of two nuclei differ?" So I decide to change my programs a little bit to solve this new problem(generalization of the double decay problem)**
-
-**There are roughly two situations:**
-
-
-* **Situation 1: Time Constant A = 1, Time Constant B = 2**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-8).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-8)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-8)%20figure.png)
-
-![图像11](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-8)%20figure.png)
-
-* **Situation 2: Time Constant A = 2, Time Constant B = 1**
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-9).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-9)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-9)%20figure.png)
-
-![图像12](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-9)%20figure.png)
-
-* **Finally, I set different initial conditionals and put them in one figure(to check whehter their final numbers are the same)** 
-
-#### [　　Code: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-14).py)
-
-#### [　　Data: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-14)%20data.txt)
-
-#### [　　Figure: Please Click Here](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-14)%20figure.png)
-
-![图像13](https://github.com/yukangnineteen/computational_physics_N2014301020117/blob/master/Exercise-4/4(improved-14).png)
-
-**I am sorry that I skip the theoretical derivation and some theoretical proof, and omit some useful tips of plotting in python(matplotlib)**
-
-***
-
-## **4.Conclusion（结论）**
-
-#### From the results of this problem and its generalization, I can draw a conclusion that the numbers of two types of nuclei will finally reach an equilibrium no matter whether the time constants of two types of nuclei are the same: And
-
-* **If their time constants are the same, they will finally reach an equilibrium where the numbers of two types of nuclei are the same**
-
-* **If their time constants are not the same, they will finally reach an equilibrium where the numbers of two types of nuclei are not the same. And the larger time constant one type of nuclei have, the larger the final number of them are. Besides, I also find that if their total number are the same, their final equilibrium are the same whatever the initial conditions(i.e., initial numbers) are.**
-
-#### And there are still some problems on programming for me:
-
-* **I don't understand the save_results function**
-
-* **I don't know how to initialize the initial conditions in the executable program**
-
-***
-
-## **5.Acknowlegement（致谢）**
-* our devoted Prof. Cai
-* Stan(Tan Shan)
-* Baidu(for plotting tips of python(matlotlib))
+## 5.Reference
