@@ -6,7 +6,7 @@
 
 ## 1.Abstract
 In the last homework, we have already drawn some trajectories of cannon shells. That situation requires known initial(firing) velocity and firing angle, and we just hit a random target. Of corse, it is not impractical in the war. In fact, what we can know is the distance between enemies(targets) and us. So, how can we use the distance and our cannon shells' firing velocity to hit the target. Besides, if the position of the target is told, what should we do to get the target with the smallest velocity. 
-
+![大炮](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/figure/U31P27T1D370853F3DT20060517093426.jpg)
 ### Question 2.10 
 Generalize the program developed for the previous problem so that it can deal with situations in which the target is at a different altitude than the cannon. Consider cases in which the target is higher and lower than the cannon. Also investigate how the minimum firing velocity requried to hit the target varies as the altitude of the target is varied. Consider the wind drag and use the adiabatic approxiation.
 
@@ -40,4 +40,10 @@ When it comes to here, it's time for us to write our programs. By the way, don't
 ![tupian](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/equation/equation_7.png), 
 ![tupian](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/equation/equation_8.png), 
 ![tupian](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/equation/equation_9.png), 
-![tupian](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/equation/equation_10.png)
+
+## 3.Body content
+###Level 1
+Introducing the facing-air drag for Pro.2.10
+For this programme, we input the firing velocity is 1000km/s,each time gap is 0.01s, the target altitude is 3km, velocity of wind is 30m/s.After that, we scan the different firing angles for each date and get the range of distance showing below
+![Facing-air shell](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/figure/figure_hit.png)
+As we can easily see in this graph, for this condition, the 55 seems the angle for longest distance. Of course, changing the parameters would give changable angle for distance, here I demonstrate one example 
