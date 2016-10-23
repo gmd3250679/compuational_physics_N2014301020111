@@ -47,3 +47,18 @@ Introducing the facing-air drag for Pro.2.10
 For this programme, we input the firing velocity is 1000km/s,each time gap is 0.01s, the target altitude is 3km, velocity of wind is 30m/s.After that, we scan the different firing angles for each date and get the range of distance showing below
 ![Facing-air shell](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/figure/figure_hit.png)
 As we can easily see in this graph, for this condition, the 55 seems the angle for longest distance. Of course, changing the parameters would give changable angle for distance, here I demonstrate one example 
+![Another condition](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/figure/figure_2hit.png)
+There is maximum distance for 65 degree.
+###Level 2
+Further update for precision attack
+Considering the error of firing angle,velocity and facing air drag,we presue the more precise attack location
+I prefer to introduce the loop calculation to presue more precise result. Here, for example, 5 loop steps for the calculation. The results present the firing velocity, firing angle and the distance from the target in horizon respectly. Obiviously, more loops we require, more precious results we could get in spite of the limitation of computer.
+![Loop](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-6/figure/figure_hitup.png)
+
+## 4.Conclusion
+There is always updates for programmes with the chase of better results, however, the practical method can satisfy our need in a way.
+So, cannon shell trajectories needs more experience rather than innovation
+## 5.Acknowledge
+###Yang Shen (https://www.zybuluo.com/whu-sy/note/540944)
+###Shan Tan (https://github.com/TanMingjun/compuational_physics_N2014301020106/edit/master/shujubao/Ex_6/Ex-6.md)
+###Pro.Cai (https://www.evernote.com/shard/s140/sh/26f85380-ee6c-4b4b-b33f-6871804d91ff/fb8cc702cb0e8ed7fafb50b2de4596ca)
