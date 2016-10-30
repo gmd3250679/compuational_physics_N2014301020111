@@ -17,4 +17,16 @@ I will mainly talk about effects of initial conditions to chaos and some points 
 
 ###Pro.3.12
 In constructing the Poincare section in Figure 3.9 we plotted points only at times that were in phaes with the drive force; that is at time
-<img src="http://latex.codecogs.com/gif.latex?t=2\pi\div\Omiga_{D}" alt="" title="" />
+<img src="http://latex.codecogs.com/gif.latex?t$\approx$2n\pi\div\Omega_{D}" alt="" title="" />,where n is an integer. At these value of t the driving force passes through zero. However, we could just as easily have chosen to make the plot at times corresponding to a maximum of the drive force, or at times 
+<img src="http://latex.codecogs.com/gif.latex?\pi\div4" alt="" title="" /> out-of-phase with the force, etc. Construct the Poincare sections for these cases and compare them with Figure 3.9
+
+###Pro.3.13
+Write a program to calculate and compare the behavior of two, nearly identical pendulums. Use it to calculate the divergence of two nearby trajectories in the chaotic regime, as in Figure 3.7, and make a qualitative estimate of the corresponding Lyapunov exponent form the slope of a plot of <img src="http://latex.codecogs.com/gif.latex?log(\Delta\theta)" alt="" title="" /> as a function of t
+
+###Pro.3.14
+Repeat the previous problem, but give the two pendulums slightly different damping factors. How does the value of the Lyapunov exponent compare with that found in Figure 3.7
+
+###Introduce
+Before our this class, we have already learned some basic knowledge about the single pendulum, without damping and driving force, 
+and when tilt angle is very small, the motion function of the pendulum can be written as <img src="http://latex.codecogs.com/gif.latex?" alt="" title="" />
+
