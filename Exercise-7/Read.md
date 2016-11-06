@@ -44,8 +44,11 @@ Use the Euler-Cromer method, we can get the equation that is helpful for us to w
 ## 3.Body context
 
 ###-Pro.3.12
-We have talked what is chaos and we have already known that the trajectory of chaos is hard to predict. But it is not all right. In fact, if we plot \theta as a function of t, and plot tthe angular velocity \omega as a function of \theta(Plot in phase space.). Strange things will appear.
-![1](
+We have talked what is chaos and we have already known that the trajectory of chaos is hard to predict. But it is not all right. In fact, if we plot <img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" /> as a function of t, and plot tthe angular velocity <img src="http://latex.codecogs.com/gif.latex?\omega" alt="" title="" /> as a function of <img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" />(Plot in phase space.). Strange things will appear.
+![1](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-7/7%20figure%209.png)
+Just look at this picture, first, the trajectory is not perfect, but, eventually, we will can two ellipses. And our results exactly accord with the reality that every angle is corresponding to two angular velocity. This is because that the pendulum will be stable eventually.
+![2](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-7/7%20figure%2010.png)
+Well, first, it's beautiful! Maybe it is complicated, but if we take a second look, not only it is fantastic, but also are there some regularity.
 ###-Pro.3.13
 As what I said, in abstact, that the system, in chaos, is quite sensitive to initial conditions. There I give an another figure for comparison. As for the program, you can set a log function or adjust your coordinate axis after plotting. Here I choose the latter.
 <img src="http://latex.codecogs.com/gif.latex?q=0.l=g=9.8\Omega_{D}=2/3dt=0.04\theta_{}{1}=0.1,\theta_{}{2}=1.001\omega(0)=0F_{}{D}=0.5" alt="" title="" />
@@ -68,6 +71,13 @@ Just like question 3.13, what we should do is to change the damping factors. The
 ![figure 4](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-7/E7figure04.png)
 ####Obviouly, when F_D=0.5, if we change q, we will find the Lyapunov exponent will be zero.
 ####However, when F_D=1.2, that is, the system is in the chaostic regime, if we change q, just shown in figure, the Lyapunov exponent will be larger, it's about 0.23, this is because that thier initial conditions is much more different, and the system is easier to be chaostic.
+
+##4.Conculsion
+####In non-chaotic regime, the effects of initial condition is really small, with the time goes on, the difference of these two pendulums will become smaller.
+####There exsit a lot of distinctions between these two pendulum, especially when time is large. The values of<img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" />  for the two pendulums differed by some values that is smaller than 2\pi.
+Obviouly, when <img src="http://latex.codecogs.com/gif.latex?F_{}{D}=0.5" alt="" title="" /> , if we change q, we will find the Lyapunov exponent will be zero.
+However, when<img src="http://latex.codecogs.com/gif.latex?F_{}{D}=1.2" alt="" title="" /> , that is, the system is in the chaostic regime, if we change q, just shown in figure, the Lyapunov exponent will be larger, it's about 0.1, this is because that thier initial conditions is much more different, and the system is easier to be chaostic.
+When we choose the points when <img src="http://latex.codecogs.com/gif.latex?\omega_{}{Dt}=2n\div\pi" alt="" title="" />  , we are surprised that this points consistitute a fractal strcture. And this surface of points is known as a strange attractor. We can draw the same conclusion in other phase too.
 
 
 
