@@ -80,8 +80,8 @@ Just like question 3.13, what we should do is to change the damping factors. The
 ####When we choose the points when <img src="http://latex.codecogs.com/gif.latex?\omega_{}{Dt}=2n\div\pi" alt="" title="" />  , we are surprised that this points consistitute a fractal strcture. And this surface of points is known as a strange attractor. We can draw the same conclusion in other phase too.
 
 ##5. Acknowledge
-###Shan Tan (http://www.jianshu.com/p/e5960d756664)
-###Kang yu (http://www.jianshu.com/p/045c5b8c91fb)
+###Shan Tan [](http://www.jianshu.com/p/e5960d756664)
+###Kang yu [](http://www.jianshu.com/p/045c5b8c91fb)
 ###Professor.Cai 
 
 
