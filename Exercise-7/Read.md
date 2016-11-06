@@ -74,11 +74,15 @@ Just like question 3.13, what we should do is to change the damping factors. The
 
 ##4.Conculsion
 ####In non-chaotic regime, the effects of initial condition is really small, with the time goes on, the difference of these two pendulums will become smaller.
-####There exsit a lot of distinctions between these two pendulum, especially when time is large. The values of<img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" />  for the two pendulums differed by some values that is smaller than 2\pi.
-Obviouly, when <img src="http://latex.codecogs.com/gif.latex?F_{}{D}=0.5" alt="" title="" /> , if we change q, we will find the Lyapunov exponent will be zero.
-However, when<img src="http://latex.codecogs.com/gif.latex?F_{}{D}=1.2" alt="" title="" /> , that is, the system is in the chaostic regime, if we change q, just shown in figure, the Lyapunov exponent will be larger, it's about 0.1, this is because that thier initial conditions is much more different, and the system is easier to be chaostic.
-When we choose the points when <img src="http://latex.codecogs.com/gif.latex?\omega_{}{Dt}=2n\div\pi" alt="" title="" />  , we are surprised that this points consistitute a fractal strcture. And this surface of points is known as a strange attractor. We can draw the same conclusion in other phase too.
+####There exsit a lot of distinctions between these two pendulum, especially when time is large. The values of<img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" />  for the two pendulums differed by some values that is smaller than <img src="http://latex.codecogs.com/gif.latex?2\div\pi" alt="" title="" />.
+####Obviouly, when <img src="http://latex.codecogs.com/gif.latex?F_{}{D}=0.5" alt="" title="" /> , if we change q, we will find the Lyapunov exponent will be zero.
+####However, when<img src="http://latex.codecogs.com/gif.latex?F_{}{D}=1.2" alt="" title="" /> , that is, the system is in the chaostic regime, if we change q, just shown in figure, the Lyapunov exponent will be larger, it's about 0.1, this is because that thier initial conditions is much more different, and the system is easier to be chaostic.
+####When we choose the points when <img src="http://latex.codecogs.com/gif.latex?\omega_{}{Dt}=2n\div\pi" alt="" title="" />  , we are surprised that this points consistitute a fractal strcture. And this surface of points is known as a strange attractor. We can draw the same conclusion in other phase too.
 
+##5. Acknowledge
+###Shan Tan (http://www.jianshu.com/p/e5960d756664)
+###Kang yu (http://www.jianshu.com/p/045c5b8c91fb)
+###Professor.Cai 
 
 
 
