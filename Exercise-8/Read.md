@@ -9,6 +9,8 @@ We have seen that at low driving forces the damped, nonlinear pendulum exhibits 
 chaotic. However, when we consider this question again, the question must come out, that is, exactly how does the transition from simple
 to chaotic behavior take place? This is the main problem that we will deal with in the following content. Of course, we also will disscuss 
 when the driving force is larger than 1.2, what will happen then?
+[![](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/figure/pendulum.gif)]
+(https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/pendulum.py)
 
 ### Problem 3.18
 Calculate Poincare section for the pendulum as it undergoes the period-doubling route to chaos. Plot
