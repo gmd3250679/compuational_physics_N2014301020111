@@ -26,7 +26,7 @@ to Figure 3.11) and obtain an estimate of the Feigenbaum <img src="http://latex.
 
 ### Qualitative and Stability Theory
 By work of Liouville, it is well known that most differential equations could not be solved with elementary integal. Then the question of interest becomes whether we can judge the properties of the solution by the equations themselves. The French mathematicist Poincare came up with the qualitative theory and the Russian mathematicist Liapunov established the stability theory separately and contemporarily. ![1](http://latex.codecogs.com/gif.latex?dr\divdt=f(r,t))
-The stability of the solution to an equation is defined as:![2](http://latex.codecogs.com/gif.latex?||r_{}{0}-r_{}{1}||<\delta)
+The stability of the solution to an equation is defined as:![2](http://latex.codecogs.com/gif.latex?||r_{}{0}-r_{}{1}||<theta)
 for equations and  satisfies the Lipschitz condition, for the initial condition  the solution , for any given , there exist , such that 
 Figuratively speaking, the stability means when the initial conditions deviate a little amount, the amount of the variance of the solution is also small.
 Liapunov also gived methods to determine whether an equation is stable. The commonly-discussed Liapunov's second method uses a so-called Liapunov funciton , judging the stability by the sign of the derivative .
@@ -39,7 +39,7 @@ To determine the critical point where the chaotic behavior appears and changes, 
 
 ## 3.Result
 ### 1. Period Doubling with different values of the drive amplitude.
-In the last time, we just gave the results when F_D is smaller than 1.2, now, I'll give results for \theta as a fuction of time for our pendulum for several different values of the drive amplitude.
+In the last time, we just gave the results when F_D is smaller than 1.2, now, I'll give results for <img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" /> as a fuction of time for our pendulum for several different values of the drive amplitude.
 ![1](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/figure/3413510-1de042eee34adb53.png)
 Surprisingly, when F_D=1.2, the system is in chaotic state. When F_D=1.35, the system become well-aligned again, its period is the same as the drive period. When F_D=1.44, its period is the twice as the drive period. When F_D=1.465, its period is the fourth times as the drive period.
 Conclusion: If we were to increase the driven amplitude further, the period would double again as the pendulum would switch to a motion that has a period eight times that of the drive. The period-doubling cascade would continue if the drive were increased further.
@@ -50,10 +50,12 @@ Bifurcation diagram is a quite good method to tell us the transition to chaos. I
 Figure 9.5 Bifurcation Diagram with <img src="http://latex.codecogs.com/gif.latex?\omega_{}{D}=2/3,q=1/2" alt="" title="" />
 And we tried several different choices of the frequency of the driving force (in Figure 9.5) and the friction coefficient (in Figure 9.6)
 ![3](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/figure/9_6.png)
-Figure 9.5 Bifurcation diagram with<img src="http://latex.codecogs.com/gif.latex?\omega_{1}{D}=1/2,\omega_{2}{D}=2/3,\omega_{3}{D}=1,\omega_{4}{D}=4/3" alt="" title="" />
+Figure 9.5 Bifurcation diagram with
+<img src="http://latex.codecogs.com/gif.latex?\omega_{1}{D}=1/2,\omega_{2}{D}=2/3,\omega_{3}{D}=1,\omega_{4}{D}=4/3" alt="" title="" />
 ![4](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/figure/9_7.png)
-Figure 9.6 Bifurcation diagram withh<img src="http://latex.codecogs.com/gif.latex?\q=0.4(upper left),q=0.6(upper right),q=0.1(lower left),q=1(lower right)" alt="" title="" />
-The x coordinate is driving force amplitude (unit:<img src="http://latex.codecogs.com/gif.latex?s_{}{-2}" alt="" title="" />), and the y coordinate is angular displacement (unit: radian)
+Figure 9.6 Bifurcation diagram with
+<img src="http://latex.codecogs.com/gif.latex?\q=0.4_{1}{},q=0.6_{2}{},q=0.1_{3}{},q=1_{4}{}" alt="" title="" />
+The x coordinate is driving force amplitude (unit:<img src="http://latex.codecogs.com/gif.latex?s_{-2}{}" alt="" title="" />), and the y coordinate is angular displacement (unit: radian)
 We can see that chaos happen at a relatively large range of the choice of parameters. However, we can not find an analytical expression for the relationship between the number of points of <img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" />at a certain<img src="http://latex.codecogs.com/gif.latex?F_{}{D}" alt="" title="" />
 This is an obvious drawback of numerical simulation discussed by Meerschaert.
 
@@ -66,6 +68,6 @@ In order to meet the requirement that we can observe the angular dislplacement i
 ## 5.Reference
 ### Shan Tan[](http://www.jianshu.com/p/b141af43e303)
 ### Shixing Wang[](https://www.zybuluo.com/ShixingWang/note/355301)
-Prof.Cai[](https://www.evernote.com/shard/s140/sh/0724815b-79a9-4357-9e85-416c33cb1b69/e2b0667446e6f7d74181969ed0c7c357) 
+### Prof.Cai[](https://www.evernote.com/shard/s140/sh/0724815b-79a9-4357-9e85-416c33cb1b69/e2b0667446e6f7d74181969ed0c7c357) 
 
 
