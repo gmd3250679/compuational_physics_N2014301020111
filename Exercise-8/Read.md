@@ -50,22 +50,22 @@ Bifurcation diagram is a quite good method to tell us the transition to chaos. I
 Figure 9.5 Bifurcation Diagram with <img src="http://latex.codecogs.com/gif.latex?\omega_{}{D}=2/3,q=1/2" alt="" title="" />
 And we tried several different choices of the frequency of the driving force (in Figure 9.5) and the friction coefficient (in Figure 9.6)
 ![3](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/figure/9_6.png)
-Figure 9.5 Bifurcation diagram with<img src="http://latex.codecogs.com/gif.latex?\omega_{}{D}=1/2(upper left),\omega_{}{D}=2/3(upper right),\omega_{}{D}=2/3(upper left),\omega_{}{D}=1(lower left)",\omega_{}{D}=4/3(lower right) alt="" title="" />
+Figure 9.5 Bifurcation diagram with<img src="http://latex.codecogs.com/gif.latex?\omega_{1}{D}=1/2,\omega_{2}{D}=2/3,\omega_{3}{D}=1,\omega_{4}{D}=4/3" alt="" title="" />
 ![4](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-8/figure/9_7.png)
-Figure 9.6 Bifurcation diagram withh<img src="http://latex.codecogs.com/gif.latex?\q=0.4(upper left),q=0.6(upper right),q=0.1(lower left)",q=1(lower right) alt="" title="" />
+Figure 9.6 Bifurcation diagram withh<img src="http://latex.codecogs.com/gif.latex?\q=0.4(upper left),q=0.6(upper right),q=0.1(lower left),q=1(lower right)" alt="" title="" />
 The x coordinate is driving force amplitude (unit:<img src="http://latex.codecogs.com/gif.latex?s_{}{-2}" alt="" title="" />), and the y coordinate is angular displacement (unit: radian)
 We can see that chaos happen at a relatively large range of the choice of parameters. However, we can not find an analytical expression for the relationship between the number of points of <img src="http://latex.codecogs.com/gif.latex?\theta" alt="" title="" />at a certain<img src="http://latex.codecogs.com/gif.latex?F_{}{D}" alt="" title="" />
 This is an obvious drawback of numerical simulation discussed by Meerschaert.
 
 ## 4.Discussion
-### Subtle time step length. 
-    In order to meet the requirement that we can observe the angular dislplacement in phase with the driving force we adjust the step length of the root-finding program to be an integal division of <img src="http://latex.codecogs.com/gif.latex?\pi" alt="" title="" />
+###Subtle time step length. 
+In order to meet the requirement that we can observe the angular dislplacement in phase with the driving force we adjust the step length of the root-finding program to be an integal division of <img src="http://latex.codecogs.com/gif.latex?\pi" alt="" title="" />
 ### Reshape of the data with mode <img src="http://latex.codecogs.com/gif.latex?2\pi" alt="" title="" />
 ### Scatter Diagram
 
 ## 5.Reference
-### Shan Tan [](http://www.jianshu.com/p/b141af43e303)
-### Shixing Wang [](https://www.zybuluo.com/ShixingWang/note/355301)
-Prof.Cai [](https://www.evernote.com/shard/s140/sh/0724815b-79a9-4357-9e85-416c33cb1b69/e2b0667446e6f7d74181969ed0c7c357) 
+### Shan Tan[](http://www.jianshu.com/p/b141af43e303)
+### Shixing Wang[](https://www.zybuluo.com/ShixingWang/note/355301)
+Prof.Cai[](https://www.evernote.com/shard/s140/sh/0724815b-79a9-4357-9e85-416c33cb1b69/e2b0667446e6f7d74181969ed0c7c357) 
 
 
