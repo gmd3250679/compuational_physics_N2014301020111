@@ -23,13 +23,11 @@ Calculate the bifurcation diagrams for the pendulum in the vicinity of F_D=1.35 
 to Figure 3.11) and obtain an estimate of the Feigenbaum <img src="http://latex.codecogs.com/gif.latex?\delta" alt="" title="" /> parameter.
 
 ## 2.Background
-In this report we only discuss a model where the pendulum is domineered by a sinusoidal external driving force and a frinction force 
-proportional to the angular speed, while the restoring force is also a sinuous function of angular displacement.
-As usual we introduce the first derivative of angular displacement and rewrite it as two first-order differential equations 
-And as we will see in the "Result" section, under some  choices the system will show a weird behavior. This weirdness is called "chaos", where a slight difference of the initial conditions may yield dramatically different results, even if this system is deterministic. Just as Edward Lorenz puts it, "When the present determines the future, but the approximate present does not approximately determine the future."
+
 Qualitative and Stability Theory
-By work of Liouville, it is well known that most differential equations could not be solved with elementary integal. Then the question of interest becomes whether we can judge the properties of the solution by the equations themselves. The French mathematicist Poincare came up with the qualitative theory and the Russian mathematicist Liapunov established the stability theory separately and contemporarily. [2]
-The stability of the solution to an equation is defined as: for equations and  satisfies the Lipschitz condition, for the initial condition  the solution , for any given , there exist , such that 
+By work of Liouville, it is well known that most differential equations could not be solved with elementary integal. Then the question of interest becomes whether we can judge the properties of the solution by the equations themselves. The French mathematicist Poincare came up with the qualitative theory and the Russian mathematicist Liapunov established the stability theory separately and contemporarily. ![1](http://latex.codecogs.com/gif.latex?dr\divdt=f(r,t))
+The stability of the solution to an equation is defined as:![2](http://latex.codecogs.com/gif.latex?||r_{}{0}-r_{}{1}||<\delta)
+for equations and  satisfies the Lipschitz condition, for the initial condition  the solution , for any given , there exist , such that 
 Figuratively speaking, the stability means when the initial conditions deviate a little amount, the amount of the variance of the solution is also small.
 Liapunov also gived methods to determine whether an equation is stable. The commonly-discussed Liapunov's second method uses a so-called Liapunov funciton , judging the stability by the sign of the derivative .
 Phase Plain, Phase Diagram, and Phase Trajectory
