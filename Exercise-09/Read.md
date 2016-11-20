@@ -2,7 +2,7 @@
 
 ### Name :郭明达
 ### Number：2014301020111
-### Date：13.Nov.2016
+### Date：20.Nov.2016
 
 ## 1.Abstract
 
@@ -11,7 +11,8 @@ daily life.
 
 ### Problem 3.30
 Investigate the Lyapunov exponent of the stadium billiard for several values of 
-<img src="http://latex.codecogs.com/gif.latex?\alpha" alt="" title="" />. You can do this qualitatively by examining the 
+<img src="http://latex.codecogs.com/gif.latex?\alpha" alt="" title="" />. 
+You can do this qualitatively by examining the 
 behavior for only one set of initial conditions for each value of 
 <img src="http://latex.codecogs.com/gif.latex?\alpha" alt="" title="" /> you consider, or more quantitatively by averaging over a range of
 initial conditions for each value of <img src="http://latex.codecogs.com/gif.latex?\alpha" alt="" title="" />
@@ -80,6 +81,6 @@ Another possibility is given by Vpython, this possibility is a square table with
 Conclusion: In this situation, the trajectory is more complicated, the system is chaotic.
 
 ## 4.Acknowledge
-[Prof Cai](https://www.evernote.com/shard/s140/sh/0724815b-79a9-4357-9e85-416c33cb1b69/e2b0667446e6f7d74181969ed0c7c357)
-[Tan Shan](http://www.jianshu.com/p/cdb6d12bc02d)
-[Shen Yang](https://www.zybuluo.com/whu-sy/note/572123)
+### [Prof Cai](https://www.evernote.com/shard/s140/sh/0724815b-79a9-4357-9e85-416c33cb1b69/e2b0667446e6f7d74181969ed0c7c357)
+### [Tan Shan](http://www.jianshu.com/p/cdb6d12bc02d)
+### [Shen Yang](https://www.zybuluo.com/whu-sy/note/572123)
