@@ -18,7 +18,7 @@ Calculate the precession of the perihelion of Mercury, following the approach de
 
 ## 2.Background
 
-![](https://github.com/earthhero2016/compuational_physics_N2014301020108/blob/master/Ex-10/dgujde6ipnt1s1xf17cp.png.resize.710x399.png)
+![](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-10/Figure/EX10%200.jpg)
 
 ![](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-10/Figure/EX10%201.png)
 
@@ -91,6 +91,7 @@ The precession phenomenon is more obvious when a is large.
 
 ## 4.Conclusion
 By programming, we find that Kepler's third law is effective in a stellar system but not workable in two systems. In addition, a precession phenomenon will occur according to general relativity. 
+[Here the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-10/Mercury.py)
 
 ## 5.Acknowledgement
 
