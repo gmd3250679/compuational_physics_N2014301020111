@@ -1,6 +1,22 @@
-##Abstract
+# The tenth assignment of computational physics: Kepler's law and the precession of the perihelion of Mercury 
+
+### Name :郭明达
+### Number：2014301020111
+### Date：27.Nov.2016
+
+## 1.Abstract
 This article mainly discusses orbits of planets and precession of the perihelion of Mercury by using Euler-Cromer method, and motion equation of planets. In addition, solutions of exercise 4.8,4.9, and 4.10 are included, all done by python and Vpython programs.
-##Background
+
+### Pro.4.8
+Verify Kepler's third law for elliptical orbits. Run the planetary motion program with initial conditions chosen to give orbits that are noncircular. Calculate <img src="http://latex.codecogs.com/gif.latex?T_{}^{2}\diva_{}^{3}" alt="" title="" /> and compare with the values given in Table 4.2
+
+### Pro.4.9
+In this section we saw that orbits are unstable for any value of <img src="http://latex.codecogs.com/gif.latex?\beta" alt="" title="" /> that is not precisely 2 in (4.12). A related question, which we did not address (until now), is how unstable an orbit might be. That is, how long will it take for an unstable orbit to become obvious. The answer to this question depends on the nature of the orbit. If the intial velocity is chosen so as to make the orbit precisely circular, then the value of <img src="http://latex.codecogs.com/gif.latex?\beta" alt="" title="" /> in (4.12) will make absolutely no difference. Of course, in practice it is impossible to construct an orbit that is exactly circular, so the instabilities when <img src="http://latex.codecogs.com/gif.latex?\beta\neq2" alt="" title="" /> will always be apparent given enough time. Even so, orbits that start out as nearly circular will remain almost stable for a longer period than those that are highly elliptical. Investigate this by studying orbits with the same value of <img src="http://latex.codecogs.com/gif.latex?\beta" alt="" title="" /> (say, <img src="http://latex.codecogs.com/gif.latex?\beta=2.05" alt="" title="" /> and comparing the behavior with different values of the ellipticity of the orbit. You should find that the orientation of orbits that are more nearly circular will rotate more slowly than those that are highly elliptical.
+
+### Pro 4.10
+Calculate the precession of the perihelion of Mercury, following the approach described this section
+
+## 2.Background
 
 ![](https://github.com/earthhero2016/compuational_physics_N2014301020108/blob/master/Ex-10/dgujde6ipnt1s1xf17cp.png.resize.710x399.png)
 
