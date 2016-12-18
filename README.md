@@ -13,3 +13,4 @@
 - [x] [Exercise 10: Kepler's law and the precession of perihelion of Mercury](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-10/Read.md)
 - [x] [Exercise 11: The movement of Hyperion](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-11/Read.md)
 - [x] [Exercise 12: The numerical results of electromagnetic field](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-12/Read.md)
+- [x] [Exercise 13: The wave]（https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Exercise-13/Read.md）
