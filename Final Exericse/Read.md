@@ -42,14 +42,17 @@ The calculation value for <x^2> in Figure 7.2 do not agree perfectly with the th
 Here we consider a typical problem of one-dimensional random walk. Particles' initial point are located at x = 0, step length is 1, fixed time interval between adjacent two steps (steps it is proportional to the time), the probabilities of each step to the left and right are 0.5.We assume that there are 5000 of the same particles, the average properties of observe their movement.
 Their changeable relationship between the distance from the origin and steps are
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE1.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r1.py) 
+you can click the figure to check the code
 As we can see from this graph, the average distance from the origin of particles in this system remains near zero.According to the theory of probability, the probability of particles to the left to the right are the same which suggest that the average distance from the origin should to 0.The numerical results and theoretical results are consistent.
 Their changeable relationship between the sqaure of the distance from the origin and steps are
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE2.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r2.py) 
+you can click the figure to check the code
 The mean square of the x shows approximate linear relationship with steps. This linear relationship has also appeared in the one-dimensional diffusion system, suggesting that the random walk process is the problem of "analogous diffusion".
 Next we will generalize the condition, every step length are a value between 1 ~ + 1, and take the probability of each value is constant.
 The changeable relationship between the two steps are
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE3.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r3.py) 
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE4.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r4.py) 
+you can click the figure to check the code
 As shown on the graph, the mean value of x fluctuates near zero and the mean square of x has the approximate linear relationshp with steps, too.
 
 ### 2.Distinctive probabilities in random walk problem
@@ -57,6 +60,7 @@ As shown on the graph, the mean value of x fluctuates near zero and the mean squ
 Here we review the situation where turn left and right movement probabilities are not same.Probability is 0.75 with we walking to the right and that to the left is 0.25, the fixed step size is 1, observe two average change with steps for relationships
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE5.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r5.py) 
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE6.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r6.py) 
+you can click the figure to check the code
 The figure shows that the average value of x increases with number linearly and its average square and steps demonstrate a quadratic relationship, which conform to the conclusion of the theory of possibility.
 
 ### 3.Random walking and diffusion
@@ -64,11 +68,13 @@ The figure shows that the average value of x increases with number linearly and 
 Here we discuss the similarity between the random walk and diffusion.Select a large number of random walkers, simulate its changeable relationship between density with time in space. 
 In one dimensional case, we obtain
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE7.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r7.py) 
+you can click the figure to check the code
 The figure shows that the peak value of density curve drops with the increase of time. At the same time, the total area stays while the width increases.
 In the two-dimensional case, we obtain
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE8.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r8.py) 
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE9.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r9.py) 
 [![you can click the figure to check the code](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Figure/FE10.png)](https://github.com/gmd3250679/compuational_physics_N2014301020111/blob/master/Final%20Exericse/Code/r10.py) 
+you can click the figure to check the code
 Pay attention to three different picture of z axis range here. Obviously, two-dimensional situation has the same conclusion as one dimension. And this kind of behavior in accordance with our intuitive sense of a diffusion process, that is we drop a certain of diffusion substance at one single point in inital time, then it spread towards all directions with the centre of this point until the densities are the same everywhere.
 
 ### 4. The change of entropy in two dimension
